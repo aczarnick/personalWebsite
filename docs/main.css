@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: black;
 }
 
 .navbar{
@@ -127,5 +128,46 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: white;
+}
+
+.footer{
+    padding: 20px;
+    background-color:black;
+}
+
+.footer a{
+    padding:20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    width: 22%;
+    display:inline-block;
+    display: -moz-inline-box;
+    zoom: 1;
+}
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-instagram {
+    background: deeppink;
     color: white;
 }
