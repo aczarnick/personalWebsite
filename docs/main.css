@@ -110,15 +110,24 @@ nav > a:hover{
     background-size: cover;
 }
 
-.orange-image > div{
+.orange-image .space-around{
     padding-top: 50px;
     display:flex;
+    flex-wrap: wrap;
 }
 
-.proj-container{
-    display:flex;
+.orange-image .space-around > a{
+    color: black;
+    text-decoration: none;
+    flex: 1 0 50%;
+    margin: 15px;
+    padding: 0 150px;
     background-color: #dddddd;
 }
+
+.orange-image a:visited {color:black;}  /* visited link */
+.orange-image a:hover {color:black;}  /* mouse over link */
+.orange-image a:active {color:black;}
 
 .orange-image h1{
     margin: 0;
@@ -131,12 +140,11 @@ nav > a:hover{
 }
 
 .orange-image h3 {
-    justify-content: right;
-    padding: 5px;
+
 }
 
 .orange-image p{
-
+    text-decoration: none;
 }
 
 .footer{
