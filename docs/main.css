@@ -1,149 +1,152 @@
-body{
+body {
     margin: 0;
     background-color: black;
 }
 
-.navbar{
+nav {
     overflow: hidden;
     background-color: #000000;
     position: fixed;
     top: 0px;
-    width: 100vw;
+    width:100vw;
     z-index: 300;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.navbar a{
-    float: left;
-    display: block;
+nav > a{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    width:200px;
 }
 
-.navbar a:hover{
+nav > a:hover{
     background: #ddd;
     color: black;
-}
-
-.main {
-
 }
 
 .red-image {
     top: 40px;
     height: 100vh;
     width:100vw;
-    background: url('images/shadesOfRed.png') no-repeat center;
+    background: url('images/ballonpop.png') no-repeat center;
     position: relative;
     background-size: cover;
 }
 
-.red-text {
+.red-image h2 {
     text-align: center;
     position: absolute;
     font-size: 50px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-.orange-image {
-    height: 100vh;
-    width:100vw;
-    background: url('images/shadesOfOrange.png') no-repeat center;
-    position: relative;
-    background-size: cover;
-}
-
-.orange-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-.yellow-image {
-    height: 100vh;
-    width:100vw;
-    background: url('images/shadesOfYellow.png') no-repeat center;
-    position: relative;
-    background-size: cover;
-}
-
-.yellow-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 75%;
     transform: translate(-50%, -50%);
     color: white;
 }
 
 .green-image {
-    height: 100vh;
+    height: 98vh;
     width:100vw;
     background: url('images/shadesOfGreen.png') no-repeat center;
     position: relative;
     background-size: cover;
 }
 
-.green-text {
+.green-image h1 {
+    padding-top:15%;
+    margin:0 20%;
+    font-size: 45px;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    color: black;
+    font-weight: 300;
+    text-shadow: 1px 1px white;
 }
 
-.blue-image {
-    height: 100vh;
+
+.yellow-image {
+    height: 98vh;
     width:100vw;
-    background: url('images/shadesOfBlue.png') no-repeat center;
+    background: url('images/shadesOfYellow.png') no-repeat center;
     position: relative;
     background-size: cover;
 }
 
-.blue-text {
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+.yellow-image div{
+    padding:50px;
+    display:flex;
 }
-.purple-image {
-    height: 100vh;
+
+.yellow-image h1 {
+    margin: 0;
+    font-size: 50px;
+    padding-top: 70px;
+    text-align: center;
+    color: black;
+    font-weight: 300;
+    text-shadow: 1px 1px white;
+}
+
+.yellow-image ul{
+    font-size: 38px;
+}
+
+.yellow-image li{
+    margin: 15px 0;
+}
+
+.orange-image {
+    height: 98vh;
     width:100vw;
-    background: url('images/shadesOfPurple.png') no-repeat center;
+    background: url('images/shadesOfOrange.png') no-repeat center;
     position: relative;
     background-size: cover;
 }
 
-.purple-text {
+.orange-image > div{
+    padding-top: 50px;
+    display:flex;
+}
+
+.proj-container{
+    display:flex;
+    background-color: #dddddd;
+}
+
+.orange-image h1{
+    margin: 0;
+    font-size: 50px;
+    padding-top: 70px;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    color: black;
+    font-weight: 300;
+    text-shadow: 1px 1px white;
+}
+
+.orange-image h3 {
+    justify-content: right;
+    padding: 5px;
+}
+
+.orange-image p{
+
 }
 
 .footer{
     padding: 20px 0;
-    display:flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color:black;
+
 }
 
-.footer a{
-    padding: 20px;
-    margin: 0 5px;
+.footer > a{
+    padding: 20px 10px;
+    margin: 5px 10px;
     width: 50px;
     font-size: 36px;
     text-align: center;
@@ -172,4 +175,103 @@ body{
 .fa-instagram {
     background: deeppink;
     color: white;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.space-around {
+    justify-content: space-around;
 }

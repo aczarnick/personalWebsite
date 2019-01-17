@@ -7,49 +7,149 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="navbar">
-        <a href="">Creative Project</a>
-        <a href="">Other Stuff</a>
-        <a href="">Other Stuff</a>
-        <a href="">Contact</a>
-    </div>
-    <div class="main">
-        <div class="red-image">
-            <div class ="red-text">
-                <p>GO FUCK YOURSELF</p>
+    <nav>
+        <a href="#overview">Overview</a>
+        <a href="#aboutMe">About Me</a>
+        <a href="#activities">Activities</a>
+        <a href="#projects">Projects</a>
+        <a href="#photos">Photos</a>
+    </nav>
+    <div class="main" >
+        <div class="red-image" id="overview">
+            <h2>Alex Czarnick</h2>
+        </div>
+        <div class="green-image" id="aboutMe">
+            <h1>Hi, my name is Alex Czarnick. I am in my 3rd year at the University of Nebraska - Lincoln.
+                I am currently studying computer engineering and am involved in many things on and off campus.
+                I built this website to showcase myself as well as my current and future projects. This website is a work
+                in progress so please bear with any technical bugs. At this current time I have only known web development for a week.
+            </h1>
+        </div>
+        <div class="yellow-image" id="activities">
+            <h1>Activities</h1>
+            <div class="space-around">
+                <ul>
+                    <li>ASUN Student Senator</li>
+                    <li>Alpha Gamma Sigma Fraternity</li>
+                    <li>Something</li>
+                </ul>
+                <ul>
+                    <li>Order of Omega</li>
+                    <li>Teaching Assistant</li>
+                    <li>Something</li>
+                </ul>
             </div>
         </div>
-        <div class="orange-image">
-            <div class ="orange-text">
-                <p>Something crazier</p>
+        <div class="orange-image" id="projects">
+            <h1>Projects</h1>
+            <div class ="space-around">
+                <div class="proj-container">
+                    <h3>First Project</h3>
+                    <p>Something</p>
+                </div>
+                <div class="proj-container">
+                    <h3>First Project</h3>
+                    <p>Something</p>
+                </div>
             </div>
         </div>
-        <div class="yellow-image">
-            <div class ="yellow-text">
-                <p>Something crazier</p>
+        <div class="slideshow-container" id ="photos">
+
+            <div class ="mySlides fade">
+                <div class="numbertext">1/9</div>
+                <img src="images/football.png" style="width:100%; height:50%;">
+                <div class="text">All-Star football game</div>
             </div>
-        </div>
-        <div class="green-image">
-            <div class ="green-text">
-                <p>Something crazier</p>
+            <div class ="mySlides fade">
+                <div class="numbertext">2/9</div>
+                <img src="images/ryla.png" style="width:100%; height:50%;">
+                <div class="text">Where I spent my summers for three years, Rotary Youth Leadership Awards Camp</div>
             </div>
-        </div>
-        <div class="blue-image">
-            <div class ="blue-text">
-                <p>Something crazier</p>
+            <div class ="mySlides fade">
+                <div class="numbertext">3/9</div>
+                <img src="images/senior.png" style="width:100%">
+                <div class="text">My favorite senior picture</div>
             </div>
-        </div>
-        <div class="purple-image">
-            <div class ="purple-text">
-                <p>Something crazier</p>
+            <div class ="mySlides fade">
+                <div class="numbertext">4/9</div>
+                <img src="images/lake.png" style="width:100%; height:50%;">
+                <div class="text">My favorite woman, besides my mom</div>
             </div>
+            <div class ="mySlides fade">
+                <div class="numbertext">5/9</div>
+                <img src="images/newyork.png" style="width:100%">
+                <div class="text">Spring break trip to New York City</div>
+            </div>
+            <div class ="mySlides fade">
+                <div class="numbertext">6/9</div>
+                <img src="images/wedding.png" style="width:100%">
+                <div class="text">Little trip for a friend's wedding</div>
+            </div>
+            <div class ="mySlides fade">
+                <div class="numbertext">7/9</div>
+                <img src="images/birthday.png" style="width:100%">
+                <div class="text">Celebrating my 21st birthday with my brother</div>
+            </div>
+            <div class ="mySlides fade">
+                <div class="numbertext">8/9</div>
+                <img src="images/formal.png" style="width:100%">
+                <div class="text">Fraternity winter formal</div>
+            </div>
+            <div class ="mySlides fade">
+                <div class="numbertext">9/9</div>
+                <img src="images/christmas.png" style="width:100%">
+                <div class="text">Always the best present</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <span class="dot" onclick="currentSlide(9)"></span>
+        </div>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";
+                dots[slideIndex-1].className += " active";
+            }
+        </script>
     </div>
     <div class="footer">
-        <a href="https://www.facebook.com/alex.czarnick" class="fa fa-facebook"></a>
-        <a href="https://twitter.com/apz2016" class="fa fa-twitter"></a>
-        <a href="https://www.linkedin.com/in/alex-czarnick-17a48612b/" class="fa fa-linkedin"></a>
-        <a href="https://www.instagram.com/alexczarnick" class="fa fa-instagram"></a>
+        <a href="#overview" style="text-decoration: none">Back To Top</a>
+        <a style="float:right" href="https://www.facebook.com/alex.czarnick" class="fa fa-facebook"></a>
+        <a style="float:right" href="https://twitter.com/apz2016" class="fa fa-twitter"></a>
+        <a style="float:right" href="https://www.linkedin.com/in/alex-czarnick-17a48612b/" class="fa fa-linkedin"></a>
+        <a style="float:right" href="https://www.instagram.com/alexczarnick" class="fa fa-instagram"></a>
     </div>
 </body>
 </html>
